@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+class student{
+    constructor(rno,nm,m1,m2,m3)
+    {
+        this.rollno=rno
+        this.name=nm
+        this.marks1=m1
+        this.marks2=m2
+        this.marks3=m3
+        this.total=function()
+        {
+            return this.marks1+this.marks2+this.marks3
+        }
+        this.percentage=function()
+        {
+            return this.total()*100/300
+        }
+    }
+
+}
+var p=new student(1,"GITESHWARI WADBUDHE",70,65,60)
+var q=new student(2,"ASHU WADBUDHE",80,89,96)
+document.getElementById("demo").innerHTML=p.rollno+" "+p.name+" "+p.marks1+" "+p.marks2+" "+p.marks3+" "+p.total()+" "+p.percentage()
+document.getElementById("demo1").innerHTML=q.rollno+" "+q.name+" "+q.marks1+" "+q.marks2+" "+q.marks3+" "+q.total()+" "+q.percentage()
+</script>
+
+</body>
+</html>
